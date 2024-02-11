@@ -1,0 +1,25 @@
+<% layout("./layouts/boilerplate") %>
+<body>
+  <h2>All Posts</h2>
+ 
+
+  <% for(post of allPost) { %>
+    <div class="card mt-3">
+      <h4>Username: @<%= post.username %></h4>
+      <p>Title: <%= post.title %>
+      </p>
+      <p>Content: <%= post.content %></p>
+      <div class="btn-group px-2">
+        <form method="get" class="mx-2" action="/feelify/<%=post.id %>"><button class="btn btn-dark">Show</button></form>
+
+        <form method="get" class="mx-2" action="/feelify/<%=post.id%>/edit"><button class="btn btn-dark">Edit</button></form>
+        <form method="post" class="mx-2" action="/feelify/<%=post.id%>?_method=DELETE"><button class="btn btn-dark">
+          <i class="fa-solid fa-trash fa-lg"></i></button>
+        </form>
+      </div>
+
+    </div>
+
+    <% }%>
+</body>
+

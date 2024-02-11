@@ -1,0 +1,21 @@
+*{
+    font-family: 'Inter', sans-serif;
+    
+}
+
+
+/* main page.ejs */
+.card{
+background-color: cornflowerblue !important;
+opacity: 0.8;
+}
+
+.card:hover{
+    opacity: 1;
+}
+
+/* show.ejs */
+.show{
+    width: 50%;
+    margin: 2rem 2rem !important;
+}

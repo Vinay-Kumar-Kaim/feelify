@@ -1,0 +1,27 @@
+<% layout("./layouts/boilerplate") %>
+
+    <body>
+        <h3 class="mx-5 my-3">Add Your Post</h3>
+        <div class="row mx-5">
+            <div class="col col-lg-8">
+                <form method="post" action="/feelify" class="needs-validation" novalidate>
+
+                    <label class="form-label">Username:</label>
+                    <input type="text" class="form-control" placeholder="enter your username" name="post[username]" required>
+
+
+                    <label class="form-label">Title:</label>
+                    <input type="text" class="form-control" placeholder="enter Post title" name="post[title]" required>
+
+                    <label class="form-label">Content:</label>
+                    <textarea placeholder="enter post content" class="form-control" name="post[content]" cols="30"
+                        rows="10" required></textarea>
+
+                    <button class="btn btn-dark my-2">submit post</button>
+                </form>
+
+            </div>
+
+        </div>
+
+    </body>

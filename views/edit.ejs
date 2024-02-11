@@ -1,0 +1,23 @@
+<% layout("./layouts/boilerplate") %>
+
+    <body>
+        <h3 class="mx-5 my-3">Edit Post</h3>
+        <div class="row mx-5">
+            <div class="col col-lg-8">
+                <form method="post" action="/feelify/<%=post.id %>?_method=PATCH">
+                    <label>User ID: <%=post.id %></label><br>
+                    <label><b>Username: @<%=post.username %></b></label>
+                    <br><br>
+                    <label class="form-label">Title</label>
+                    <input type="text" placeholder="enter Post Title" name="post[title]" value="<%=post.title %>"
+                        class="form-control">
+                    <label class="form-label">Content:</label>
+                    <textarea class="form-control" name="post[content]" cols="30"
+                        rows="10"><%=post.content %></textarea>
+                    <button class="btn btn-dark">Update</button>
+
+            </div>
+        </div>
+
+        </form>
+    </body>
